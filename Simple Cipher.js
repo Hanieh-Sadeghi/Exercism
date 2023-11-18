@@ -2,7 +2,7 @@ const LETTERS = 'abcdefghijklmnopqrstuvwxyz';
 
 export class Cipher {
   constructor(key = 'aaaaaaaaaa') {
-    // map characters to values 0 - 25
+
     this.__key = Array.from(key, c => LETTERS.indexOf(c));
   }
 
