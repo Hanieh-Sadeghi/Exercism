@@ -9,5 +9,5 @@ export const transform = (letters: string[][]): Result => {
       result[formattedLetters] = Number(key);
     });
     return result;
-  }, {} as Result);
+  }, {});
 };
