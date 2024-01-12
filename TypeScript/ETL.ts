@@ -1,13 +1,13 @@
 interface Result {
-  [key: string]: number;
+  [key: string]: number
 }
-
 export const transform = (letters: string[][]): Result => {
-  return letters.reduce((result, [key, values]) => {
-    values.forEach((value) => {
-      const formattedLetters = value.toLowerCase();
-      result[formattedLetters] = Number(key);
-    });
-    return result;
-  }, {});
+  const result: Result = {};
+  for (const [key, value] of Object.entries(letters)) {
+    value.forEach(val => {
+      let formattedLetters = val.toLowerCase();
+      result[`${formattedLetters}`] = Number(key);
+    })
+  }
+  return result;
 };
